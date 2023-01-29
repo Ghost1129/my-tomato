@@ -4,7 +4,7 @@ import OrderOnline from '../assets/images/orderonline.jpg'
 
 const Card = () => {
   return (
-    <div className='min-w-[160px] max-w-[350px] h-[15rem] m-2 rounded-lg border transition-all hover:scale-105'>
+    <div className='min-w-[160px] max-w-[350px] h-[15rem] m-2 rounded-lg border transition duration-300 ease-in-out hover:scale-105'>
         <div className='w-full h-4/5 relative'>
             <Image src={OrderOnline} fill className='object-cover rounded-t-lg'/>
         </div>
