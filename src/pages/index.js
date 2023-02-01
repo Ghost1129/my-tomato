@@ -6,6 +6,7 @@ import Card from '@/utils/Card'
 import Collections from '@/components/Collections'
 import Popularplaces from '@/components/Popularplaces'
 import GetApp from '@/components/GetApp'
+import Footer from '@/components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,7 +31,7 @@ export default function Home() {
           <Popularplaces/>
        </main>
        <GetApp/>
-       
+       <Footer/>
     </>
   )
 }
