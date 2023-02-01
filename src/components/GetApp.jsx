@@ -11,18 +11,18 @@ const GetApp = () => {
         {/* Inner Body */}
         <div className="w-[70%] md:w-[80%] h-full flex items-center justify-center">
             {/* Photo */}
-            <div className='hidden md:flex items-center justify-center'><Image src={MobileImage} className="w-[250px] h-[280px]"/></div>
+            <div className='items-center justify-center hidden md:flex'><Image src={MobileImage} className="w-[250px] h-[280px]"/></div>
             {/* Text */}
             <div className='text-center md:text-left'>
                 <h3 className='text-3xl md:text-5xl md:font-medium'>Get the Zomato App</h3>
-                <span className='text-sm md:text-lg font-light '>We will send you a link, open it on your phone to download the app</span>
+                <span className='text-sm font-light md:text-lg '>We will send you a link, open it on your phone to download the app</span>
                 <div className="flex gap-2 font-light">
                     <div className='flex items-center gap-2 ml-4'>
-                        <input className='accent-red-500 w-4 h-4' type="radio" name='radio' id='email' onClick={()=> setSelected(true)} defaultChecked={selected} />
+                        <input className='w-4 h-4 accent-red-500' type="radio" name='radio' id='email' onClick={()=> setSelected(true)} defaultChecked={selected} />
                         <label htmlFor='email'>Email</label>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <input className='accent-red-500 w-4 h-4' type="radio" name='radio' id='phone' onClick={()=> setSelected(false)} />
+                        <input className='w-4 h-4 accent-red-500' type="radio" name='radio' id='phone' onClick={()=> setSelected(false)} />
                         <label htmlFor='phone'>Phone</label>
                     </div>
                 </div>
@@ -37,11 +37,11 @@ const GetApp = () => {
                     </div> 
                     }
                     </div>
-                    <button className=' bg-red-400 text-white px-4 py-2 rounded-lg'>Submit</button>
+                    <button className='px-4 py-2 text-white bg-red-400 rounded-lg '>Submit</button>
                 </div>
-                <div className='flex flex-col items-center md:items-start justify-center md:justify-start'>
+                <div className='flex flex-col items-center justify-center md:items-start md:justify-start'>
                     <span className='text-sm font-thin' >Download App From</span>
-                    <div className='flex gap-3 items-center justify-center '>
+                    <div className='flex items-center justify-center gap-3 '>
                         <Image src={PlayStore} className="rounded-lg w-[120px] h-[40px]"/>
                         <Image src={AppStore} className="rounded-lg w-[120px] h-[40px]"/>
                     </div>
