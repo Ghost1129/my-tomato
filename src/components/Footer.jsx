@@ -23,7 +23,6 @@ const Footer = () => {
                         <span>English</span>
                         <MdOutlineKeyboardArrowDown size={'1.4rem'} />
                     </div>
-
                 </div>
             </div>
              <div className='grid grid-cols-2 text-sm font-light md:grid-cols-5'>
