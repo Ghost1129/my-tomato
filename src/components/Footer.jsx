@@ -15,7 +15,7 @@ const Footer = () => {
                 <span className='text-4xl font-extrabold -skew-x-6'>zomato</span>
                 <div className='flex gap-3'>
                     <div className='flex items-center gap-1 p-2 border border-gray-200 rounded-md cursor-pointer'>
-                        <Image src={IndiaFlag} className="w-6 h-6"/>
+                        <Image src={IndiaFlag} alt='India' className="w-6 h-6"/>
                         <span>India</span>
                         <MdOutlineKeyboardArrowDown size={'1.4rem'} /></div>
                     <div className='flex items-center gap-1 p-2 border border-gray-200 rounded-md cursor-pointer'>
@@ -80,8 +80,8 @@ const Footer = () => {
                     </div>
                     </div>
                     <div className='flex gap-2'>
-                        <Image src={AppStore} className="rounded-lg w-[120px] h-[40px]"/>
-                        <Image src={PlayStore} className="rounded-lg w-[120px] h-[40px]"/>
+                        <Image src={AppStore} alt='Appstore' className="rounded-lg w-[120px] h-[40px]"/>
+                        <Image src={PlayStore} alt='PlayStore' className="rounded-lg w-[120px] h-[40px]"/>
                     </div>
                 </div>
              </div>

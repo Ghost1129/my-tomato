@@ -11,7 +11,7 @@ const GetApp = () => {
         {/* Inner Body */}
         <div className="w-[70%] md:w-[80%] h-full flex items-center justify-center">
             {/* Photo */}
-            <div className='items-center justify-center hidden md:flex'><Image src={MobileImage} className="w-[250px] h-[280px]"/></div>
+            <div className='items-center justify-center hidden md:flex'><Image src={MobileImage} alt='Zomato' className="w-[250px] h-[280px]"/></div>
             {/* Text */}
             <div className='text-center md:text-left'>
                 <h3 className='text-3xl md:text-5xl md:font-medium'>Get the Zomato App</h3>
@@ -42,8 +42,8 @@ const GetApp = () => {
                 <div className='flex flex-col items-center justify-center md:items-start md:justify-start'>
                     <span className='text-sm font-thin' >Download App From</span>
                     <div className='flex items-center justify-center gap-3 '>
-                        <Image src={PlayStore} className="rounded-lg w-[120px] h-[40px]"/>
-                        <Image src={AppStore} className="rounded-lg w-[120px] h-[40px]"/>
+                        <Image src={PlayStore} alt='Play' className="rounded-lg w-[120px] h-[40px]"/>
+                        <Image src={AppStore}  alt='App' className="rounded-lg w-[120px] h-[40px]"/>
                     </div>
                 </div>
             </div>
