@@ -6,11 +6,10 @@ import Searchbar from './Searchbar'
 
 const Navbar2 = () => {
     const [menu, setMenu] = useState(false)
-    console.log(menu)
   return (
-    <div className='flex  items-center justify-between font-Popin w-full z-10 h-[70px] px-4 overflow-hidden'>
+    <div className='flex items-center justify-between font-Popin w-full z-10 h-[70px] px-4 overflow-hidden'>
         <AiOutlineMenu className='cursor-pointer md:hidden' size={'1.6rem'} onClick={()=> setMenu(val => !val)}  />
-        <div className='relative flex items-center justify-between'>
+        <div className='relative flex items-center justify-between lg:min-w-[70%] mx-auto'>
             <span className='text-4xl font-bold -skew-x-2'>zomato</span>
             <div className='hidden md:flex'>
             <Searchbar width='90%'/>

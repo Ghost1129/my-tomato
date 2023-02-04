@@ -6,40 +6,48 @@ import delivery2 from '../assets/icons/delivery2.png'
 import nightlife1 from '../assets/icons/nightlife1.png'
 import nightlife2 from '../assets/icons/nightlife2.png'
 import Image from 'next/image'
+import Link from 'next/link'
+
 
 const SelectionCard = ({active, setActive}) => {
+  
+
+
   return (
-    <div>
+    <div className='w-full lg:max-w-[70%] mx-auto'>
         <span className='hidden md:block'>Home/India/Indore
         </span>
        <div className='flex gap-12 my-4 ml-8 overflow-x-scroll md:overflow-x-hidden'>
-            <div className='flex items-center gap-4 cursor-pointer min-w-max' onClick={()=>setActive('order')} >
-            <div className={`flex items-center justify-center ${active==='order'?'bg-amber-100':'bg-gray-200'} rounded-full w-14 h-14`}>
+            <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+            query: { page: 'orderfood' },}} >
+            <div className={`flex items-center justify-center ${active['order']?'bg-amber-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='order'?delivery2:delivery1} alt='delivery' className="w-8 h-8"/>
             </div>
-            <div className={`text-xl font-medium ${active==='order'?'text-red-500':'text-gray-500'}`}>
+            <div className={`text-xl font-medium ${active['order']?'text-red-500':'text-gray-500'}`}>
                 Delivery
             </div>
 
-        </div>
-         <div className='flex items-center gap-4 cursor-pointer min-w-max' onClick={()=>setActive('dine')}>
-            <div className={`flex items-center justify-center ${active==='dine'?'bg-sky-100':'bg-gray-200'} rounded-full w-14 h-14`}>
+        </Link>
+         <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+            query: { page: 'dine' },}}>
+            <div className={`flex items-center justify-center ${active['dine']?'bg-sky-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='dine'?dinning2:dinning1} alt='Dining' className="w-8 h-8"/>
             </div>
-            <div className={`text-xl font-medium ${active==='dine'?'text-red-500':'text-gray-500'}`}>
+            <div className={`text-xl font-medium ${active['dine']?'text-red-500':'text-gray-500'}`}>
                 Dining Out
             </div>
 
-        </div>
-        <div className='flex items-center gap-4 cursor-pointer min-w-max' onClick={()=>setActive('night')} >
-            <div className={`flex items-center justify-center  ${active==='night'?'bg-indigo-100':'bg-gray-200'} rounded-full w-14 h-14`}>
+        </Link>
+        <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+            query: { page: 'night' },}} >
+            <div className={`flex items-center justify-center  ${active['night']?'bg-indigo-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='night'?nightlife2:nightlife1} alt='Nighlife'  className="w-8 h-8"/>
             </div>
-            <div className={`text-xl font-medium ${active==='night'?'text-red-500':'text-gray-500'}`}>
+            <div className={`text-xl font-medium ${active['night']?'text-red-500':'text-gray-500'}`}>
                 Nightlife
             </div>
 
-        </div>
+        </Link>
        </div>
 
 
