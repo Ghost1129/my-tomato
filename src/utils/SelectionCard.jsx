@@ -14,11 +14,11 @@ const SelectionCard = ({active, setActive}) => {
 
 
   return (
-    <div className='w-full lg:max-w-[70%] mx-auto'>
+    <div className='w-full'>
         <span className='hidden md:block'>Home/India/Indore
         </span>
        <div className='flex gap-12 my-4 ml-8 overflow-x-scroll md:overflow-x-hidden'>
-            <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+            <Link className={`flex items-center gap-4  cursor-pointer min-w-max border-b-red-500  ${active['order']?'border-b-2 `':''} `}  href={{pathname: '',
             query: { page: 'orderfood' },}} >
             <div className={`flex items-center justify-center ${active['order']?'bg-amber-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='order'?delivery2:delivery1} alt='delivery' className="w-8 h-8"/>
@@ -28,7 +28,7 @@ const SelectionCard = ({active, setActive}) => {
             </div>
 
         </Link>
-         <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+         <Link className={`flex items-center gap-4  cursor-pointer min-w-max border-b-red-500  ${active['dine']?'border-b-2 `':''} `}  href={{pathname: '',
             query: { page: 'dine' },}}>
             <div className={`flex items-center justify-center ${active['dine']?'bg-sky-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='dine'?dinning2:dinning1} alt='Dining' className="w-8 h-8"/>
@@ -38,7 +38,7 @@ const SelectionCard = ({active, setActive}) => {
             </div>
 
         </Link>
-        <Link className='flex items-center gap-4 cursor-pointer min-w-max'  href={{pathname: '',
+        <Link className={`flex items-center gap-4  cursor-pointer min-w-max border-b-red-500  ${active['night']?'border-b-2 `':''} `}  href={{pathname: '',
             query: { page: 'night' },}} >
             <div className={`flex items-center justify-center  ${active['night']?'bg-indigo-100':'bg-gray-200'} rounded-full w-14 h-14`}>
                 <Image src={active==='night'?nightlife2:nightlife1} alt='Nighlife'  className="w-8 h-8"/>
