@@ -10,7 +10,7 @@ import {AiFillLinkedin,AiFillInstagram,AiFillTwitterCircle,AiFillYoutube,AiFillF
 const Footer = () => {
   return (
     <div className='flex w-full px-4 font-Popin '>
-        <div>
+        <div className='mx-auto'>
              <div className="flex flex-col md:items-center md:flex-row">
                 <span className='text-4xl font-extrabold -skew-x-6'>zomato</span>
                 <div className='flex gap-3'>
