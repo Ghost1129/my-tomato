@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar2 from "@/components/Navbar2";
 import DeliveryPage from "@/containers/DeliveryPage";
 import DinePage from "@/containers/DinePage";
@@ -26,7 +27,7 @@ export default function IndoreLayout({children}) {
     }, [page])
     return (
       <>
-       <div className="lg:max-w-[80%] mx-auto">
+       <div className="lg:max-w-[70%] mx-auto">
         <Navbar2/>
         <SelectionCard active={active} setActive={setActive} />
         <Filters page={page}  />
@@ -36,6 +37,7 @@ export default function IndoreLayout({children}) {
         { active.dine && <DinePage active={active}/>}
         { active.night && <NightlifePage active={active}/>}
         </div>
+        <Footer/>
         </>
        
       )

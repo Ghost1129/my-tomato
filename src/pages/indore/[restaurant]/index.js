@@ -1,11 +1,15 @@
+import Navbar2 from '@/components/Navbar2'
 import React from 'react'
 
 const index = (props) => {
   console.log(props)
   return (
-    <div className='w-full h-screen bg-red-100'>
-      <h1>Res</h1>
+    <>
+    <Navbar2/>
+    <div className=''>
+      
     </div>
+    </>
   )
 }
 

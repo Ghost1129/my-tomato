@@ -118,7 +118,7 @@ const RestaurantCard = () => {
     ]
 
   return (
-    <Link href={'/indore/Paradise Hotel'} className='max-w-[300px] min-w-[300px] min-h-[300px] max-h-[400px] w-auto h-auto hover:outline outline-1 outline-neutral-200 hover:shadow-md p-2 rounded-md'>
+    <Link href={'/indore/Paradise Hotel'} className='max-w-[320px] min-w-[300px] min-h-[300px] max-h-[400px] w-auto h-auto hover:outline outline-1 outline-neutral-200 hover:shadow-lg p-2 rounded-md'>
         <div className='flex flex-col gap-2'>
             <div className='relative w-full h-[60%] rounded-lg'>
                 <div className='absolute text-[10px] text-white bg-black bg-opacity-70 px-1 top-4'>Promoted</div>
