@@ -1,7 +1,9 @@
 "use client"
 
+import Link from 'next/link'
 import React, { useState } from 'react'
-import {AiOutlineMenu} from 'react-icons/ai'
+import {AiOutlineMenu,AiOutlineShoppingCarte} from 'react-icons/ai'
+import {BsCart} from 'react-icons/bs'
 import Searchbar from './Searchbar'
 
 const Navbar2 = () => {
@@ -14,6 +16,15 @@ const Navbar2 = () => {
             <div className='hidden md:flex'>
             <Searchbar width='90%'/>
             </div>
+            <Link href={{ pathname: '/cart'}} 
+              className='relative mx-2'>
+                <BsCart className='cursor-pointer ' size={'1.6rem'}  />
+                <span className='absolute flex items-center justify-center w-5 h-5 bg-red-300 rounded-full -right-2 -top-2'>0
+                </span>
+
+            </Link>
+            
+
             <div className='items-center hidden gap-5 text-lg md:flex'>
                 <span className=''>Login</span>
                 <span className=''>Signup</span>

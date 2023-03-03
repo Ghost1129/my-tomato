@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
        <Homepage />
-       <main className='md:max-w-[80%] md:mx-auto'>
+       <main className=' md:max-w-[80%] md:mx-auto'>
           <div className='grid grid-cols-2 md:grid-cols-3'>
             <Card/>
             <Card/>
