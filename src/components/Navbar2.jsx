@@ -20,7 +20,9 @@ const Navbar2 = () => {
         onClick={() => setMenu((val) => !val)}
       />
       <div className="relative flex items-center justify-between md:w-full">
-        <span className="text-4xl font-bold -skew-x-2">zomato</span>
+        <Link href={"/indore?page=orderfood"}>
+          <span className="text-4xl font-bold -skew-x-2">zomato</span>
+        </Link>
         <div className="hidden md:flex">
           <Searchbar width="90%" />
         </div>

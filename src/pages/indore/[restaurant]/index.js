@@ -16,7 +16,7 @@ const Restaurant = () => {
   if (loading) return <div>Loading...</div>;
   return (
     <>
-      <div className="w-screen md:px-32 ">
+      <div className="w-screen px-4 md:px-32 ">
         <Navbar2 />
         <div className="">
           <div className="text-xs">Home / India / Indore</div>

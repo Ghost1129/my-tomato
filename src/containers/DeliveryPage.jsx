@@ -33,7 +33,7 @@ const DeliveryPage = () => {
         <span className="text-2xl font-bold">Top brands for you</span>
         <Carasouel brand={true} />
       </div>
-      <div className="w-[80%] mx-auto mt-4 mb-4 ">
+      <div className="w-[90%] mx-auto mt-4 mb-4 ">
         <span className="text-2xl font-bold">
           Delivery Restaurants in Indore
         </span>
