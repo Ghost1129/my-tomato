@@ -17,7 +17,7 @@ const RestaurantBody = ({ data }) => {
 
   useEffect(() => {
     switch (`/indore/${restaurant}/${page}`) {
-      case `/indore/${restaurant}/`:
+      case `/indore/${restaurant}/overview`:
         setPageContent(<OverviewFieldComponent />);
         break;
       case `/indore/${restaurant}/menu`:
@@ -31,7 +31,7 @@ const RestaurantBody = ({ data }) => {
         break;
 
       default:
-        setPageContent(<OverviewFieldComponent />);
+        setPageContent(<OrderOnlineFieldComponent data={data} />);
     }
   }, [restaurant, page]);
 
@@ -44,6 +44,9 @@ const RestaurantBody = ({ data }) => {
               pathname: `/indore/${restaurant}`,
               query: { page: "overview" },
             }}
+            className={`${
+              page === "overview" ? "border-b-2 border-black" : ""
+            }`}
           >
             Overview
           </Link>
@@ -52,6 +55,7 @@ const RestaurantBody = ({ data }) => {
               pathname: `/indore/${restaurant}`,
               query: { page: "menu" },
             }}
+            className={`${page === "menu" ? "border-b-2 border-black" : ""}`}
           >
             Menu
           </Link>
@@ -60,6 +64,7 @@ const RestaurantBody = ({ data }) => {
               pathname: `/indore/${restaurant}`,
               query: { page: "reviews" },
             }}
+            className={`${page === "reviews" ? "border-b-2 border-black" : ""}`}
           >
             Reviews
           </Link>
@@ -68,6 +73,7 @@ const RestaurantBody = ({ data }) => {
               pathname: `/indore/${restaurant}`,
               query: { page: "photos" },
             }}
+            className={`${page === "photos" ? "border-b-2 border-black" : ""}`}
           >
             Photos
           </Link>
