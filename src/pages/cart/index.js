@@ -5,8 +5,10 @@ import {
   removeFromBasket,
 } from "@/slices/basketSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 const Basket = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
   const additem = (item) => {
     const { id, title, price, type, desc } = item;
@@ -35,10 +37,17 @@ const Basket = () => {
     <div className="min-h-screen bg-gray-100">
       <div className="max-w-[70%] mx-auto p-4">
         <div className="relative flex gap-10 py-2 ">
-          <span className="text-sm">Back</span>
-          <h2 className="absolute -translate-x-1/2 left-1/2 ">
+          <span
+            onClick={() => {
+              router.back();
+            }}
+            className="text-sm cursor-pointer"
+          >
+            Back
+          </span>
+          {/* <h2 className="absolute -translate-x-1/2 left-1/2 ">
             Restaurant Name
-          </h2>
+          </h2> */}
         </div>
         <div className="flex gap-2 p-3 text-xs bg-white rounded-md">
           <span>Icon</span>
