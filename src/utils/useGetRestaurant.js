@@ -2,7 +2,7 @@ import { useState, useEffect, cache } from "react";
 
 export const useGetRestaurant = () => {
   const url =
-    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5270362&lng=77.13593279999999&page_type=DESKTOP_WEB_LISTING";
+    "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5270362&lng=77.13593279999999&page_type=DESKTOP_WEB_LISTING";
   const [data, setRestaurant] = useState([]);
   const [loading, setLoading] = useState(false);
   const [cache, setCache] = useState({});

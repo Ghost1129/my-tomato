@@ -11,7 +11,7 @@ import { useGetMenu } from "@/utils/useGetmenu";
 const Restaurant = () => {
   const { uuid } = useSelector(selectRestaurant);
   const { menu, loading, error } = useGetMenu(uuid);
-  const uuid2 = "b8b7f6a0-4f9e-11e9-8b5c-2a2ae2dbcce4";
+  console.log(menu);
 
   if (loading) return <div>Loading...</div>;
   return (
