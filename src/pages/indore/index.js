@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 
 
 
+
+
 export default function IndoreLayout({children}) {
     const router = useRouter();
     const page = router.query.page
@@ -18,6 +20,7 @@ export default function IndoreLayout({children}) {
         dine: false,
         night: false,
     })
+   
     useEffect(() => {
         setActive({
             order: page === 'orderfood' ? true : false,
@@ -25,6 +28,8 @@ export default function IndoreLayout({children}) {
             night: page === 'night' ? true : false,
         })
     }, [page])
+
+   
     return (
       <>
        <div className="lg:max-w-[70%] mx-auto">
