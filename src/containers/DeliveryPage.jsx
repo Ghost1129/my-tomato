@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const DeliveryPage = () => {
   const { data, loading } = useGetRestaurant();
+  
   const dispatch = useDispatch();
   const restra = useSelector(selectRestras);
   useEffect(() => {

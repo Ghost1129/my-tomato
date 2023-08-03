@@ -19,8 +19,9 @@ export const useGetRestaurant = () => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setRestaurant(data?.data?.cards[2]?.data?.data?.cards);
-        setCache((cache[1] = data?.data?.cards[2]?.data?.data?.cards));
+        console.log(data);
+        setRestaurant(data?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setCache((cache[1] = data?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants));
         setLoading(false);
       } catch (error) {
         setLoading(false);

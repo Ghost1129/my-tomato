@@ -17,11 +17,7 @@ import { useDispatch } from 'react-redux';
 import { setRestaurant } from '@/slices/restaurantSlice';
 
 const RestaurantCard = ({item}) => {
-    
-    const { name,id, uuid, avgRating, cloudinaryImageId, costForTwoString, deliveryTime, cuisines, aggregatedDiscountInfo } = item?.data
-    console.log(cloudinaryImageId)
-
-    
+    const { name,id, uuid, avgRating, cloudinaryImageId, costForTwoString, deliveryTime, cuisines, aggregatedDiscountInfo } = item?.info    
     const dispatch = useDispatch();
     const image_Url="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
 
@@ -35,7 +31,7 @@ const RestaurantCard = ({item}) => {
 
 
   return (
-    <Link href={`/indore/${uuid}`} onClick={setRestra} className='max-w-[320px] min-w-[300px] min-h-[300px] max-h-[400px] w-auto h-auto hover:outline outline-1 outline-neutral-200 hover:shadow-lg p-2 rounded-md'>
+    <Link href={`/indore/${id}`} onClick={setRestra} className='max-w-[320px] min-w-[300px] min-h-[300px] max-h-[400px] w-auto h-auto hover:outline outline-1 outline-neutral-200 hover:shadow-lg p-2 rounded-md'>
         <div className='flex flex-col gap-2'>
             <div className='relative w-full h-[60%] rounded-lg'>
                 {item.promoted && <div className='absolute text-[10px] text-white bg-black bg-opacity-70 px-1 top-4'>Promoted</div>}
